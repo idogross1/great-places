@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prefrences ⚙</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home 🏠</a>
+        <a href="map.html">Map 🗺</a>
+        <a href="prefrences.html">Prefrences ⚙</a>
+      </nav>
+    </header>
+    <form class="form-pref" onsubmit="onSubmit(event)">
+      <table>
+        <tr>
+          <td><label for="color">Choose Color:</label></td>
+          <td><input type="color" class="color" /></td>
+        </tr>
+        <tr>
+          <td><label for="birth-date"></label>Date of Birth:</td>
+          <td><input type="date" class="birth-date" /></td>
+        </tr>
+        <tr>
+          <td><label for="birth-time">Time of Birth:</label></td>
+          <td><input type="time" class="birth-time" /></td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="js/storageService.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/userPrefService.js"></script>
+  </body>
+</html>
