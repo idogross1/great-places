@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/map.css" />
     <title>Map 🗺</title>
   </head>
-  <body>
+  <body onLoad="initMap()">
     <header>
       <nav>
         <a href="index.html">Home 🏠</a>
@@ -15,6 +16,14 @@
       </nav>
       <h1>Oh, the Places You'll go!</h1>
     </header>
+    <!-- <div id="map" onclick="onMap()"></div> -->
+    <div id="map"></div>
+    <button onClick="onGetLocation()">⨂</button>
+
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGIAlvrVM7bIYUE_wBpwm4sKGD_NvlxO8&callback=initMap"
+    ></script>
     <script src="js/placeService.js"></script>
     <script src="js/storageService.js"></script>
     <script src="js/controller.js"></script>

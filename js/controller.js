@@ -28,3 +28,17 @@ function renderHoroscope(gHoroscope) {
   elHoroscope.querySelector('.emoji').innerText = gHoroscope.emoji;
   elHoroscope.querySelector('p').innerText = gHoroscope.horoscope;
 }
+
+function onGetLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      map.setCenter(new google.maps.LatLng(latitude, longitude));
+    });
+  }
+}
+
+function onMap(mapsMouseEvent) {
+  const { lat, lng } = mapsMouseEvent.latLng.toJSON();
+  addLocationToPlaces(lat, lng);
+}
